@@ -395,8 +395,14 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
 
 
         // Selecting the tabs EXTENSIONS ORIGINAL
+
+
+        ////THIS IS WHERE THE CODE IS BREAKING
         ////////////////////////////////////////////////////////////////////////////
-        const selectorTabs4 = 'tab-list-item.os-tab-bar-tab[data-id="b57706972c3fd6f8b33ab7d3"][data-icon-src="partstudio"]';
+        //WE ARE REPLACING THE ID to see if the code works or not
+        // const selectorTabs4 = 'tab-list-item.os-tab-bar-tab[data-id="b57706972c3fd6f8b33ab7d3"][data-icon-src="partstudio"]'; //Original code
+        const selectorTabs4 = 'tab-list-item.os-tab-bar-tab[data-id="413b58dd3b773617c61c2236"][data-icon-src="partstudio"]';
+
         console.log("extension ORIGINAL ");
         console.log(''); // This logs an empty line, effectively skipping a line
         await waitForEnter();
@@ -510,7 +516,9 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         console.log("DDDDDDDDDD");
         console.log(''); // This logs an empty line, effectively skipping a line
         const selector33 = 'div[data-id="Dg4JdGx6jlZTm4XD"]'; // Replace with the appropriate selector
-        const title33 = '(1) Initial Sketch'; // Replace with the desired title
+        ////Believe this is where the code is breaking
+        const title33 = '(1) Initial Sketch is not fully defined'; // Replace with the desired title
+        // const title33 = '(1) Initial Sketch'; // Replace with the desired title
         const editOptions33 = await performRightClickOptionByTitle(newPage, selector33, title33);
         console.log("EEEEEEEEEE");
         console.log(''); // This logs an empty line, effectively skipping a line
